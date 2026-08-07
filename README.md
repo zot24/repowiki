@@ -17,7 +17,7 @@ RepoWiki gives every repository a **persistent memory that lives with the code**
 - **Survives sessions.** A decision captured today is consulted by the agent next month — automatically, because `AGENTS.md` / `CLAUDE.md` point to it.
 - **Survives tools.** Captured in Claude Code, consulted by Codex or Cursor. It's just Markdown in `.llm-wiki/`, versioned and cloned with the repo.
 - **Survives people.** A new teammate (human or agent) clones the repo and inherits the project's accumulated judgment, not just its code.
-- **Portable by design.** Compiled knowledge is a valid [OKF](https://github.com/google/okf) v0.2 bundle, so it works with anything that speaks the format.
+- **Portable by design.** Compiled knowledge is a valid [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.2 bundle, so it works with anything that speaks the format.
 
 This is the project-memory layer that RAG over source code or raw chat logs can't
 provide: small, intentional, high-signal knowledge — not transcript dumps.
