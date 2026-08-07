@@ -10,7 +10,10 @@ import (
 	"github.com/zot24/repowiki/internal/wiki"
 )
 
-var initNoInject bool
+var (
+	initNoInject bool
+	initNoSkill  bool
+)
 
 var initCmd = &cobra.Command{
 	Use:   "init [dir]",
@@ -60,6 +63,16 @@ var initCmd = &cobra.Command{
 			}
 		}
 
+		if !initNoSkill {
+			result, err := wiki.InstallSkill(repoRoot)
+			if err != nil {
+				return fmt.Errorf("installing skill: %w", err)
+			}
+			if result != "unchanged" {
+				fmt.Printf("  .claude/skills/repowiki/SKILL.md: %s\n", result)
+			}
+		}
+
 		if len(created) > 0 {
 			_ = w.AppendLog("init", "wiki bundle created")
 		}
@@ -72,5 +85,6 @@ var initCmd = &cobra.Command{
 
 func init() {
 	initCmd.Flags().BoolVar(&initNoInject, "no-inject", false, "skip AGENTS.md / CLAUDE.md injection")
+	initCmd.Flags().BoolVar(&initNoSkill, "no-skill", false, "skip installing the Claude Code project skill")
 	rootCmd.AddCommand(initCmd)
 }

@@ -9,6 +9,7 @@ OKF-compatible LLM Wiki with automatic (redacted) session capture via plugins/ho
 Planning complete. Ready for Phase 1 (Foundation).
 
 Full project plan → [PLAN.md](./PLAN.md)
+CLI command reference → [docs/CLI.md](./docs/CLI.md)
 
 ### Core Goals
 - Per-repository LLM Wiki that lives with the code (Git-versioned)

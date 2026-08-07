@@ -17,6 +17,18 @@ a plan), capture it:
 - Structured capture: `repowiki ingest <file> --type decision|note|session|source`
 - Then keep the index fresh: `repowiki index`
 
+**Command cheat sheet** (run `repowiki <cmd> --help` for flags):
+
+| Command | Purpose |
+|---------|---------|
+| `repowiki status` | Counts, inbox, recent activity |
+| `repowiki search <query>` | Full-text search the wiki |
+| `repowiki get <path>` | Print a document (e.g. `pages/overview.md`) |
+| `repowiki ingest <file\|url\|->` | Capture into `raw/` (`--type`, `--title`, `--tags`) |
+| `repowiki index` | Regenerate `index.md` |
+| `repowiki lint [--fix]` | Check structure & OKF conformance |
+| `repowiki log` | Recent wiki activity |
+
 Follow the conventions in `.llm-wiki/SCHEMA.md`. Prefer updating an existing page
 over creating a near-duplicate.
 
