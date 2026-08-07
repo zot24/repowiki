@@ -1,0 +1,39 @@
+# Binaries
+/repowiki
+/bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of go coverage
+*.out
+
+# Dependency directories
+/vendor/
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary / local session state
+.llm-wiki/.sessions/
+.llm-wiki/inbox/.tmp/
+
+# Env
+.env
+.env.local
